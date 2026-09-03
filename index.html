@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Last Block</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+          <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+
+</head>
+
+<body>
+
+    <!-- =====================
+         LOADING SCREEN
+    ====================== -->
+
+    <div id="loadingScreen">
+
+        <img
+            src="logo.png"
+            class="loading-logo"
+        >
+
+        <h1>LAST BLOCK</h1>
+
+        <p class="loading-title">
+    Loading
+</p>
+
+<button id="backToProfilesBtn" class="back-to-profiles-btn">
+    ← Back
+</button>
+
+<div class="loading-circle">
+
+    <svg>
+
+        <circle
+            cx="60"
+            cy="60"
+            r="50"
+            class="circle-bg">
+        </circle>
+
+        <circle
+            cx="60"
+            cy="60"
+            r="50"
+            id="loadingProgress"
+            class="circle-progress">
+        </circle>
+
+    </svg>
+
+    <div
+        id="loadingPercent"
+        class="loading-percent">
+        0%
+    </div>
+
+</div>
+
+        <p id="loadingText">
+
+            Loading... 0%
+
+        </p>
+
+    </div>
+
+
+    <!-- =====================
+         PROFILE SCREEN
+    ====================== -->
+
+    <div
+        id="profileScreen"
+        class="hidden"
+    >
+
+       <h1 class="profile-title">
+    Who Is Playing?
+</h1>
+
+<p class="profile-subtitle">
+    Select your profile to continue
+</p>
+
+<button id="manageProfilesBtn"
+        class="manage-profiles-btn"
+        type="button"
+        aria-label="Manage profiles">
+    −
+</button>
+
+
+
+        <div
+            id="profilesContainer"
+            class="profiles-container"
+        >
+
+        </div>
+
+        <div
+            id="addProfile"
+            class="profile-card add-card"
+        >
+
+            <div class="plus">
+
+                +
+
+            </div>
+
+            <p>
+
+                New Player
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================
+         CREATE PLAYER POPUP
+    ====================== -->
+
+    <div
+        id="createPlayerPopup"
+        class="popup hidden"
+    >
+
+        <div class="popup-box">
+
+            <h2>
+
+                Create Player
+
+            </h2>
+<div class="create-avatar">
+    🎮
+</div>
+            <input
+                type="text"
+                id="playerNameInput"
+                placeholder="Enter Name"
+            >
+
+            <button
+                id="createPlayerBtn"
+            >
+
+                Start Playing
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================
+         GAME SCREEN
+    ====================== -->
+
+    <div
+        id="gameScreen"
+        class="hidden"
+    >
+
+        <div class="player-header">
+
+            <div id="playerName">
+
+                Player
+
+            </div>
+
+            <div id="playerId">
+
+                ID
+
+            </div>
+
+        </div>
+
+
+        <!-- YOUR CURRENT GAME -->
+
+        <div class="game-container">
+
+            <h1>
+
+                Last Block
+
+            </h1>
+
+            <div class="score-box">
+
+                <div
+                    id="comboText"
+                    class="combo-text">
+                </div>
+
+                <div class="highscore-box">
+
+                    Best:
+
+                    <span id="highScore">
+
+                        0
+
+                    </span>
+
+                </div>
+
+                ⭐ Score:
+
+                <span id="score">
+
+                    0
+
+                </span>
+
+            </div>
+
+            <div
+                id="gameEmoji"
+                class="game-emoji">
+                😎
+            </div>
+
+            <div
+                id="emojiText"
+                class="emoji-text">
+
+                Start The Game 🔥
+
+            </div>
+
+            <div
+                class="board"
+                id="board">
+            </div>
+
+            <div
+                class="block-area"
+                id="blockArea">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================
+         GAME OVER
+    ====================== -->
+
+    <div
+        id="gameOverPopup"
+        class="game-over-popup">
+
+        <div class="popup-content">
+
+           <div class="gameover-icon">
+    💀
+</div>
+
+<h2>
+    Game Over
+</h2>
+            <p>
+
+                Score:
+
+                <span id="finalScore">
+
+                    0
+
+                </span>
+
+            </p>
+
+            <p>
+
+                Best:
+
+                <span id="bestScorePopup">
+
+                    0
+
+                </span>
+
+            </p>
+
+            <div class="gameover-buttons">
+
+    <button id="replayBtn">
+
+        🔄 Replay
+
+    </button>
+
+    <button id="restartBtn">
+
+        👤 Profiles
+
+    </button>
+
+</div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
